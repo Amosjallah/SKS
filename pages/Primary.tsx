@@ -6,14 +6,14 @@ export const Primary: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwpY-ShTkE-3YS3AuMOwwbq9nIrOkRQ2C4zMGVHTN3JowQTrsxtNkHpsZKi-D0KtoHuKA15K4Fd3qK1Tn8eTxDf5yh5PLeOTeYnxirAKQA7YG--9tw0A_4eTowzn4bPkcXURzEg=w1920-h1080-c"
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5vdy_uEM2nHEEcyJw3H5Fa1H4GEnle7U5EasSXzjzWKvC0ztR2mmrdgNteT4jx-Oo6hW-XLzG3N12jXlWF8bBv2ERto1Up83LYoiBr90h5LSGBO-QFRmr8RAM-0Q5rMlgADM=w1920-h1080-c"
             alt="Primary School Students"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-academy-navy/70 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-academy-navy/80 mix-blend-multiply" />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <span className="text-academy-gold font-bold uppercase tracking-widest text-sm mb-4 block">Basic Education</span>

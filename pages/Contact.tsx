@@ -5,11 +5,18 @@ export const Contact: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-academy-navy/40 z-0"></div>
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5vdy_uEM2nHEEcyJw3H5Fa1H4GEnle7U5EasSXzjzWKvC0ztR2mmrdgNteT4jx-Oo6hW-XLzG3N12jXlWF8bBv2ERto1Up83LYoiBr90h5LSGBO-QFRmr8RAM-0Q5rMlgADM=w1920-h1080-c"
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-academy-navy/80 mix-blend-multiply" />
+        </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Contact Us</h1>
+          <p className="text-xl text-slate-200 max-w-2xl mx-auto">
             We'd love to hear from you. Reach out to us for inquiries, admissions, or to schedule a school tour.
           </p>
         </div>

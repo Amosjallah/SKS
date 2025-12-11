@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ArrowRight, Star, Calendar, ChevronRight, ChevronLeft } from 'lucide-react';
+import { ArrowRight, Star, Calendar, ChevronRight, ChevronLeft, Shield, Users, Lightbulb, Heart, Quote, Mail } from 'lucide-react';
 import { ANNOUNCEMENTS, STATISTICS } from '../data';
 
 export const Home: React.FC = () => {
@@ -132,19 +132,22 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
+      {/* Feature / Core Values Section */}
+      <section className="py-16 bg-white relative z-10 -mt-0 md:-mt-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-            {STATISTICS.map((stat, idx) => (
-              <div key={idx} className="text-center px-4 pt-8 md:pt-0">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-academy-navy mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-academy-gold font-bold uppercase tracking-wider text-xs mb-3">
-                  {stat.label}
-                </div>
-                <p className="text-slate-500 text-sm">{stat.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { icon: <Lightbulb size={32} />, title: "Creative Learning", desc: "Fostering imagination and critical thinking in every child." },
+              { icon: <Shield size={32} />, title: "Safe Environment", desc: "Secure facilities and a nurturing atmosphere for peace of mind." },
+              { icon: <Users size={32} />, title: "Expert Faculty", desc: "Dedicated, qualified, and passionate educators for all levels." },
+              { icon: <Heart size={32} />, title: "Holistic Care", desc: "Focusing on moral, social, and emotional growth alongside academics." }
+            ].map((feature, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-sm shadow-xl border-b-4 border-academy-gold text-center hover:-translate-y-2 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-academy-navy/5 text-academy-navy rounded-full mb-6 group-hover:bg-academy-navy group-hover:text-white transition-colors">
+                    {feature.icon}
+                  </div>
+                  <h3 className="font-serif font-bold text-lg text-academy-navy mb-3">{feature.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -187,6 +190,44 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+            {STATISTICS.map((stat, idx) => (
+              <div key={idx} className="text-center px-4 pt-8 md:pt-0">
+                <div className="text-4xl md:text-5xl font-serif font-bold text-academy-navy mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-academy-gold font-bold uppercase tracking-wider text-xs mb-3">
+                  {stat.label}
+                </div>
+                <p className="text-slate-500 text-sm">{stat.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Strip Section */}
+      <section className="py-0">
+         <div className="grid grid-cols-2 md:grid-cols-4">
+            {[
+              { label: "Academics", img: "https://picsum.photos/id/24/800/800" },
+              { label: "Sports", img: "https://picsum.photos/id/450/800/800" },
+              { label: "Creative Arts", img: "https://picsum.photos/id/160/800/800" },
+              { label: "Community", img: "https://picsum.photos/id/338/800/800" }
+            ].map((item, idx) => (
+              <div key={idx} className="aspect-square relative group overflow-hidden cursor-pointer">
+                 <img src={item.img} alt={item.label} className="w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+                 <div className="absolute inset-0 bg-academy-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-serif font-bold tracking-widest text-lg border-b-2 border-academy-gold pb-1">{item.label}</span>
+                 </div>
+              </div>
+            ))}
+         </div>
       </section>
 
       {/* News & Announcements */}
@@ -240,9 +281,77 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200">
+         <div className="container mx-auto px-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+                <span className="h-px w-8 bg-academy-gold"></span>
+                <span className="text-academy-gold font-bold uppercase tracking-widest text-xs">Testimonials</span>
+                <span className="h-px w-8 bg-academy-gold"></span>
+            </div>
+            <h2 className="text-3xl font-serif font-bold text-academy-navy mb-12">What Parents Say</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+               {[
+                 {
+                   text: "The transformation in my son has been amazing. He is more confident, articulate, and loves going to school everyday.",
+                   author: "Mrs. Mensah",
+                   role: "Parent, Grade 3"
+                 },
+                 {
+                   text: "The teachers at Smart Kids are truly dedicated. I appreciate the individual attention they give to each child to help them excel.",
+                   author: "Mr. Osei",
+                   role: "Parent, JHS 1"
+                 },
+                 {
+                   text: "Best decision we made for our daughter. The facilities are top-notch and the moral discipline is exactly what we wanted.",
+                   author: "Sarah K.",
+                   role: "Parent, Nursery"
+                 }
+               ].map((testimonial, idx) => (
+                  <div key={idx} className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition relative">
+                     <Quote size={40} className="text-academy-gold/20 absolute top-4 left-4" />
+                     <p className="text-slate-600 leading-relaxed italic mb-6 relative z-10 pt-4">"{testimonial.text}"</p>
+                     <div className="flex flex-col items-center">
+                        <div className="w-10 h-10 bg-slate-200 rounded-full mb-2"></div>
+                        <h4 className="font-bold text-academy-navy">{testimonial.author}</h4>
+                        <span className="text-xs text-slate-500 uppercase tracking-wide">{testimonial.role}</span>
+                     </div>
+                  </div>
+               ))}
+            </div>
+         </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 bg-academy-gold text-white">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+             <div className="md:w-1/2">
+                <div className="flex items-center gap-3 mb-2">
+                   <Mail size={24} className="text-white" />
+                   <h2 className="text-2xl font-serif font-bold">Stay Connected</h2>
+                </div>
+                <p className="text-white/80 leading-relaxed">
+                   Subscribe to our newsletter to receive the latest updates, event reminders, and educational tips directly in your inbox.
+                </p>
+             </div>
+             <div className="md:w-1/2 w-full">
+                <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+                   <input 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      className="flex-1 p-4 rounded-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-academy-navy" 
+                   />
+                   <button className="bg-academy-navy text-white px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-sm hover:bg-slate-800 transition">
+                     Subscribe
+                   </button>
+                </form>
+             </div>
+          </div>
+       </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-academy-navy relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-academy-gold/10 -skew-x-12 transform translate-x-20"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 -skew-x-12 transform translate-x-20"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <Star size={48} className="text-academy-gold mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">

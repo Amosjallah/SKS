@@ -64,11 +64,19 @@ export const FAQ: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <section className="bg-slate-100 py-20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5vdy_uEM2nHEEcyJw3H5Fa1H4GEnle7U5EasSXzjzWKvC0ztR2mmrdgNteT4jx-Oo6hW-XLzG3N12jXlWF8bBv2ERto1Up83LYoiBr90h5LSGBO-QFRmr8RAM-0Q5rMlgADM=w1920-h1080-c"
+            alt="FAQ"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-academy-navy/80 mix-blend-multiply" />
+        </div>
+        <div className="container mx-auto px-6 text-center relative z-10">
           <HelpCircle size={48} className="mx-auto text-academy-gold mb-6" />
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-academy-navy mb-4">Frequently Asked Questions</h1>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Frequently Asked Questions</h1>
+          <p className="text-slate-200 max-w-2xl mx-auto">
             Find answers to common questions about admissions, academics, and student life at Smart Kids School.
           </p>
         </div>

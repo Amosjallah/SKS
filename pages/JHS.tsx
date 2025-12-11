@@ -6,7 +6,7 @@ export const JHS: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5vdy_uEM2nHEEcyJw3H5Fa1H4GEnle7U5EasSXzjzWKvC0ztR2mmrdgNteT4jx-Oo6hW-XLzG3N12jXlWF8bBv2ERto1Up83LYoiBr90h5LSGBO-QFRmr8RAM-0Q5rMlgADM=w1920-h1080-c"

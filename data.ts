@@ -6,7 +6,8 @@ export const FACULTY: FacultyMember[] = [
     name: "Mrs. Eleanor Vance",
     role: "Headmistress",
     department: "Administration",
-    image: "https://picsum.photos/id/64/400/500",
+    // Image 2
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyBrX1bkCUuhCpqLlluf5F_JFyT_2sPRxU4C9Fl7rLcHvpNlMjv_bA8Gip3jUU5iz2l9VzfrNFCBHnRp7dHsKmsG7-3R_YBaqBWGs3PWgL1K3Jp4W1QzoZaTPBasASCrIcdd_h3=w800-h1000-c",
     bio: "With over 20 years in early childhood education, Mrs. Vance ensures a nurturing environment for all smart kids."
   },
   {
@@ -14,7 +15,8 @@ export const FACULTY: FacultyMember[] = [
     name: "Mr. Arthur Pendelton",
     role: "Head of JHS",
     department: "Junior High",
-    image: "https://picsum.photos/id/338/400/500",
+    // Image 3
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwpY-ShTkE-3YS3AuMOwwbq9nIrOkRQ2C4zMGVHTN3JowQTrsxtNkHpsZKi-D0KtoHuKA15K4Fd3qK1Tn8eTxDf5yh5PLeOTeYnxirAKQA7YG--9tw0A_4eTowzn4bPkcXURzEg=w800-h1000-c",
     bio: "Specializing in Mathematics and Science, ensuring our final year students are ready for their BECE."
   },
   {
@@ -22,7 +24,8 @@ export const FACULTY: FacultyMember[] = [
     name: "Ms. Sarah Jenkins",
     role: "Preschool Coordinator",
     department: "Preschool",
-    image: "https://picsum.photos/id/342/400/500",
+    // Image 1
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5vdy_uEM2nHEEcyJw3H5Fa1H4GEnle7U5EasSXzjzWKvC0ztR2mmrdgNteT4jx-Oo6hW-XLzG3N12jXlWF8bBv2ERto1Up83LYoiBr90h5LSGBO-QFRmr8RAM-0Q5rMlgADM=w800-h1000-c",
     bio: "Expert in Montessori methods, Ms. Jenkins oversees our Creche and Nursery departments."
   },
   {
@@ -30,7 +33,8 @@ export const FACULTY: FacultyMember[] = [
     name: "Mr. Marcus Thorne",
     role: "Sports Director",
     department: "Co-curricular",
-    image: "https://picsum.photos/id/1005/400/500",
+    // Image 3 (Repeated to fill 4 slots with available 3 images)
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwpY-ShTkE-3YS3AuMOwwbq9nIrOkRQ2C4zMGVHTN3JowQTrsxtNkHpsZKi-D0KtoHuKA15K4Fd3qK1Tn8eTxDf5yh5PLeOTeYnxirAKQA7YG--9tw0A_4eTowzn4bPkcXURzEg=w800-h1000-c",
     bio: "Dedicated to physical fitness and discipline through football, athletics, and swimming."
   }
 ];
