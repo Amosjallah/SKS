@@ -1,6 +1,5 @@
 import React from 'react';
 import { ANNOUNCEMENTS } from '../data';
-import { Calendar } from 'lucide-react';
 
 export const News: React.FC = () => {
   return (

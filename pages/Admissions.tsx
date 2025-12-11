@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Download, HelpCircle } from 'lucide-react';
+import { Download, HelpCircle } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 export const Admissions: React.FC = () => {

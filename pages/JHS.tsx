@@ -1,5 +1,5 @@
 import React from 'react';
-import { Microscope, Award, Brain, Target } from 'lucide-react';
+import { Award, Brain, Target } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 export const JHS: React.FC = () => {
